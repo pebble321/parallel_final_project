@@ -1,6 +1,7 @@
 import csv
 import random
 import sys
+from operator import index
 
 # Define header and data values to be randomly selected from for the csv file
 header_r = ['patient_id', 'name', 'city', 'state']
@@ -13,11 +14,12 @@ state_abbr = [
   'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY'
 ]
 patient_name = [
-    'Betty', 'Amir', 'Robert', 'Patricia', 'John', 'Jennifer',
-    'Michael', 'Linda', 'William', 'Elizabeth', 'David', 'Barbara',
-    'Richard', 'Susan', 'Joseph', 'Jessica', 'Thomas', 'Sarah',
-    'Charles', 'Karen', 'Christopher', 'Nancy', 'Daniel', 'Lisa',
-    'Matthew', 'James', 'Anthony', 'Margaret', 'Katy', 'Sandra'
+    'Liam', 'Charlotte', 'Oliver', 'Amelia', 'Noah', 'Sophia', 'Elijah', 'Isabella',
+    'James', 'Mia', 'William', 'Ava', 'Lucas', 'Harper', 'Benjamin', 'Evelyn',
+    'Henry', 'Abigail', 'Alexander', 'Ella', 'Michael', 'Elizabeth', 'Daniel', 'Sofia',
+    'Jacob', 'Emily', 'Ethan', 'Madison', 'Matthew', 'Scarlett', 'Sebastian', 'Victoria',
+    'Jackson', 'Luna', 'Levi', 'Grace', 'Mateo', 'Chloe', 'Jack', 'Zoey', 'Owen',
+    'Aria', 'Gabriel', 'Hazel', 'Caleb', 'Ellie', 'Nathan', 'Nora', 'Samuel', 'Layla'
 ]
 
 doctor_name = [
@@ -49,7 +51,8 @@ with open(filename_r, mode='w', newline='') as file:
     for i in range(int(sys.argv[1])):
         # generate data for each row and pass to writerow function using a list
         row_patient_id = random.randint(1, 50)
-        row_patient_name = random.choice(patient_name)
+        index_patient = row_patient_id - 1
+        row_patient_name = patient_name[index_patient]
         row_city = random.choice(cities)
         row_state = random.choice(state_abbr)
         row_data = [row_patient_id, row_patient_name, row_city, row_state]
