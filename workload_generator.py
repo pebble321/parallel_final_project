@@ -43,6 +43,7 @@ cities = [
 
 filename_r = 'R.csv'
 filename_s = 'S.csv'
+random.seed(42)
 # generate data for the R table
 with open(filename_r, mode='w', newline='') as file:
     writer = csv.writer(file)
