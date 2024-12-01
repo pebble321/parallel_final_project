@@ -7,11 +7,11 @@ from operator import index
 header_r = ['patient_id', 'name', 'city', 'state']
 header_s = ['patient_id', 'doctor']
 state_abbr = [
-  'AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA',
-  'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MD',
-  'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ',
-  'NM', 'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC',
-  'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY'
+    'NY', 'CA', 'IL', 'TX', 'AZ', 'PA', 'TX', 'CA', 'TX', 'CA', 'TX', 'FL',
+    'TX', 'OH', 'NC', 'CA', 'IN', 'WA', 'CO', 'DC', 'MA', 'TX', 'MI', 'TN',
+    'TN', 'OR', 'OK', 'NV', 'KY', 'MD', 'WI', 'NM', 'AZ', 'CA', 'CA', 'MO',
+    'GA', 'FL', 'NE', 'NC', 'CO', 'CA', 'VA', 'CA', 'MN', 'OK', 'TX', 'FL',
+    'LA', 'KS', 'OH'
 ]
 patient_name = [
     'Liam', 'Charlotte', 'Oliver', 'Amelia', 'Noah', 'Sophia', 'Elijah', 'Isabella',
