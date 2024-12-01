@@ -54,8 +54,8 @@ with open(filename_r, mode='w', newline='') as file:
         row_patient_id = random.randint(1, 50)
         index_patient = row_patient_id - 1
         row_patient_name = patient_name[index_patient]
-        row_city = random.choice(cities)
-        row_state = random.choice(state_abbr)
+        row_city = cities[index_patient]
+        row_state = state_abbr[index_patient]
         row_data = [row_patient_id, row_patient_name, row_city, row_state]
         writer.writerow(row_data)  # Writing the rows/data
 
